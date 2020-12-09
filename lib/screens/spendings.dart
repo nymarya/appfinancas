@@ -1,25 +1,25 @@
-import 'dart:ffi';
 
-import 'package:appfinancas/model/goal.dart';
+
+import 'package:appfinancas/model/spending.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 // class Goal{
 //   final Float valor;
-//   final String titulo;
+//   final String tipo;
 
-//   Goal({this.valor, this.titulo});
+//   Goal({this.valor, this.tipo});
 // }
 
 
-class GoalsScreen extends StatefulWidget {
+class SpendingsScreen extends StatefulWidget {
   @override
-  _GoalsScreen createState() => _GoalsScreen( goals: [GoalModel(titulo: "Viagem", valor: 3000.0)]);
+  _SpendingsScreen createState() => _SpendingsScreen( goals: [SpendingModel(tipo: "Lazer", valor: 3000.0)]);
 }
-class _GoalsScreen extends State<GoalsScreen> {
+class _SpendingsScreen extends State<SpendingsScreen> {
 
-  List<GoalModel> goals = [GoalModel(titulo: "Viagem", valor: 3000.0)];
+  List<SpendingModel> goals = [SpendingModel(tipo: "Lazer", valor: 3000.0)];
 
-  _GoalsScreen({this.goals});
+  _SpendingsScreen({this.goals});
   
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class _GoalsScreen extends State<GoalsScreen> {
                             padding: EdgeInsets.all(40),
                             child: RichText(
                               text: TextSpan(
-                                text: goals[index].titulo,
+                                text: goals[index].tipo,
                                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, 
                                 color: Colors.black),
                                 )
@@ -58,12 +58,12 @@ class _GoalsScreen extends State<GoalsScreen> {
   }
 }
 
-class FormWidgetsGoals extends StatefulWidget {
+class FormWidgetsSpendings extends StatefulWidget {
   @override
-  _FormWidgetsGoalsState createState() => _FormWidgetsGoalsState();
+  _FormWidgetsSpendingsState createState() => _FormWidgetsSpendingsState();
 }
 
-class _FormWidgetsGoalsState extends State<FormWidgetsGoals> {
+class _FormWidgetsSpendingsState extends State<FormWidgetsSpendings> {
   final _formKey = GlobalKey<FormState>();
   String title = '';
   String description = '';
@@ -72,7 +72,7 @@ class _FormWidgetsGoalsState extends State<FormWidgetsGoals> {
   bool brushedTeeth = false;
   bool enableFeature = false;
 
-  GoalModel goal = GoalModel();
+  SpendingModel goal = SpendingModel();
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +103,7 @@ class _FormWidgetsGoalsState extends State<FormWidgetsGoals> {
                           ),
                           onChanged: (value) {
                             setState(() {
-                              goal.titulo = value;
+                              goal.tipo = value;
                             });
                           },
                         ),
@@ -137,7 +137,7 @@ class _FormWidgetsGoalsState extends State<FormWidgetsGoals> {
                               // Navigator.push(
                               //     context,
                               //     MaterialPageRoute(
-                              //         builder: (context) => GoalsScreen()));
+                              //         builder: (context) => SpendingsScreen()));
                             }
                           },
                           child: Text(

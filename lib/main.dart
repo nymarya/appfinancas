@@ -2,6 +2,10 @@ import 'package:appfinancas/screens/nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'screens/form_widgets.dart';
 import 'screens/goals.dart';
+import 'screens/incomings.dart';
+import 'screens/investments.dart';
+import 'screens/spendings.dart';
+import 'screens/fixed_spendings.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +30,46 @@ void main() {
     name: 'Nova meta',
     route: '/form_goals',
     builder: (context) => FormWidgetsGoals(),
+  ),
+  Demo(
+    name: 'Receitas',
+    route: '/incomings',
+    builder: (context) => IncomingsScreen(),
+  ),
+   Demo(
+    name: 'Nova receita',
+    route: '/form_incomings',
+    builder: (context) => FormWidgetsIncomings(),
+  ),
+  Demo(
+    name: 'Despesas fixas',
+    route: '/fixed_spendings',
+    builder: (context) => FixedSpendingsScreen(),
+  ),
+   Demo(
+    name: 'Nova despesa fixa',
+    route: '/form_fixed_spendings',
+    builder: (context) => FormWidgetFixedSpendings(),
+  ),
+  Demo(
+    name: 'Despesas variáveis',
+    route: '/spendings',
+    builder: (context) => SpendingsScreen(),
+  ),
+   Demo(
+    name: 'Nova despesa variável',
+    route: '/form_spendings',
+    builder: (context) => FormWidgetsSpendings(),
+  ),
+  Demo(
+    name: 'Investimentos',
+    route: '/investments',
+    builder: (context) => InvestmentsScreen(),
+  ),
+   Demo(
+    name: 'Novo investmento',
+    route: '/form_investments',
+    builder: (context) => FormWidgetsInvestments(),
   ),
 ];
 

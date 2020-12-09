@@ -1,25 +1,24 @@
-import 'dart:ffi';
 
-import 'package:appfinancas/model/goal.dart';
+import 'package:appfinancas/model/incoming.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 // class Goal{
 //   final Float valor;
-//   final String titulo;
+//   final String categoria;
 
-//   Goal({this.valor, this.titulo});
+//   Goal({this.valor, this.categoria});
 // }
 
 
-class GoalsScreen extends StatefulWidget {
+class IncomingsScreen extends StatefulWidget {
   @override
-  _GoalsScreen createState() => _GoalsScreen( goals: [GoalModel(titulo: "Viagem", valor: 3000.0)]);
+  _IncomingsScreen createState() => _IncomingsScreen( goals: [IncomingModel(categoria: "Salário", valor: 3000.0)]);
 }
-class _GoalsScreen extends State<GoalsScreen> {
+class _IncomingsScreen extends State<IncomingsScreen> {
 
-  List<GoalModel> goals = [GoalModel(titulo: "Viagem", valor: 3000.0)];
+  List<IncomingModel> goals = [IncomingModel(categoria: "Salário", valor: 3000.0)];
 
-  _GoalsScreen({this.goals});
+  _IncomingsScreen({this.goals});
   
   @override
   Widget build(BuildContext context) {
@@ -39,7 +38,7 @@ class _GoalsScreen extends State<GoalsScreen> {
                             padding: EdgeInsets.all(40),
                             child: RichText(
                               text: TextSpan(
-                                text: goals[index].titulo,
+                                text: goals[index].categoria,
                                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, 
                                 color: Colors.black),
                                 )
@@ -58,12 +57,12 @@ class _GoalsScreen extends State<GoalsScreen> {
   }
 }
 
-class FormWidgetsGoals extends StatefulWidget {
+class FormWidgetsIncomings extends StatefulWidget {
   @override
-  _FormWidgetsGoalsState createState() => _FormWidgetsGoalsState();
+  _FormWidgetsIncomingsState createState() => _FormWidgetsIncomingsState();
 }
 
-class _FormWidgetsGoalsState extends State<FormWidgetsGoals> {
+class _FormWidgetsIncomingsState extends State<FormWidgetsIncomings> {
   final _formKey = GlobalKey<FormState>();
   String title = '';
   String description = '';
@@ -72,7 +71,7 @@ class _FormWidgetsGoalsState extends State<FormWidgetsGoals> {
   bool brushedTeeth = false;
   bool enableFeature = false;
 
-  GoalModel goal = GoalModel();
+  IncomingModel goal = IncomingModel();
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +102,7 @@ class _FormWidgetsGoalsState extends State<FormWidgetsGoals> {
                           ),
                           onChanged: (value) {
                             setState(() {
-                              goal.titulo = value;
+                              goal.categoria = value;
                             });
                           },
                         ),
@@ -137,7 +136,7 @@ class _FormWidgetsGoalsState extends State<FormWidgetsGoals> {
                               // Navigator.push(
                               //     context,
                               //     MaterialPageRoute(
-                              //         builder: (context) => GoalsScreen()));
+                              //         builder: (context) => IncomingsScreen()));
                             }
                           },
                           child: Text(

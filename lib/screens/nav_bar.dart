@@ -65,9 +65,29 @@ class NavDrawer extends StatelessWidget {
           ),
          // ...demos.map((d) => DemoTile(d)),
           ListTile(
-            leading: Icon(Icons.verified_user),
+            leading: Icon(Icons.verified_outlined),
             title: Text('Metas'),
             onTap: () => {Navigator.pushNamed(context, '/goals')},
+          ),
+          ListTile(
+            leading: Icon(Icons.payments_outlined),
+            title: Text('Despesas fixas'),
+            onTap: () => {Navigator.pushNamed(context, '/fixed_spendings')},
+          ),
+          ListTile(
+            leading: Icon(Icons.payments_sharp),
+            title: Text('Despesas variáveis'),
+            onTap: () => {Navigator.pushNamed(context, '/spendings')},
+          ),
+          ListTile(
+            leading: Icon(Icons.account_balance_wallet_outlined),
+            title: Text('Receitas'),
+            onTap: () => {Navigator.pushNamed(context, '/incomings')},
+          ),
+          ListTile(
+            leading: Icon(Icons.attach_money_outlined),
+            title: Text('Investimentos'),
+            onTap: () => {Navigator.pushNamed(context, '/investments')},
           ),
           // ListTile(
           //   leading: Icon(Icons.settings),
