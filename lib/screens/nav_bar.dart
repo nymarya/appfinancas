@@ -53,7 +53,7 @@ class NavDrawer extends StatelessWidget {
         children: <Widget>[
           DrawerHeader(
             child: Text(
-              'Side menu',
+              'Menu',
               style: TextStyle(color: Colors.white, fontSize: 25),
             ),
             decoration: BoxDecoration(
@@ -88,6 +88,11 @@ class NavDrawer extends StatelessWidget {
             leading: Icon(Icons.attach_money_outlined),
             title: Text('Investimentos'),
             onTap: () => {Navigator.pushNamed(context, '/investments')},
+          ),
+          ListTile(
+            leading: Icon(Icons.supervised_user_circle_outlined),
+            title: Text('Perfil'),
+            onTap: () => {Navigator.pushNamed(context, '/profile')},
           ),
           // ListTile(
           //   leading: Icon(Icons.settings),

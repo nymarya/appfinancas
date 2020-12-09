@@ -7,6 +7,7 @@ import 'screens/investments.dart';
 import 'screens/spendings.dart';
 import 'screens/fixed_spendings.dart';
 import 'screens/notifications.dart';
+import 'screens/profile.dart';
 
 void main() {
   runApp(MyApp());
@@ -76,6 +77,11 @@ void main() {
     name: 'Notificações',
     route: '/notifications',
     builder: (context) => NotificationsScreen(),
+  ),
+   Demo(
+    name: 'Perfil',
+    route: '/profile',
+    builder: (context) => ProfileScreen(),
   ),
 ];
 
