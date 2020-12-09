@@ -24,7 +24,7 @@ class _IncomingsScreen extends State<IncomingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Metas'),
+        title: Text('Receitas'),
       ),
       body: Container(
         child: Column(children: <Widget>[ 
@@ -77,7 +77,7 @@ class _FormWidgetsIncomingsState extends State<FormWidgetsIncomings> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Form widgets'),
+        title: Text('Receita'),
       ),
       body: Form(
         key: _formKey,

@@ -25,7 +25,7 @@ class _FixedSpendingsScreen extends State<FixedSpendingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Metas'),
+        title: Text('Despesas fixas'),
       ),
       body: Container(
         child: Column(children: <Widget>[ 
@@ -78,7 +78,7 @@ class _FormWidgetFixedSpendingsState extends State<FormWidgetFixedSpendings> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Form widgets'),
+        title: Text('Despesa Fixa'),
       ),
       body: Form(
         key: _formKey,

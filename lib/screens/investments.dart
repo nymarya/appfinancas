@@ -25,7 +25,7 @@ class _InvestmentsScreen extends State<InvestmentsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Metas'),
+        title: Text('Investimentos'),
       ),
       body: Container(
         child: Column(children: <Widget>[ 
@@ -78,7 +78,7 @@ class _FormWidgetsInvestmentsState extends State<FormWidgetsInvestments> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Form widgets'),
+        title: Text('Investimento'),
       ),
       body: Form(
         key: _formKey,

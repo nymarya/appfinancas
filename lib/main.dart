@@ -6,6 +6,7 @@ import 'screens/incomings.dart';
 import 'screens/investments.dart';
 import 'screens/spendings.dart';
 import 'screens/fixed_spendings.dart';
+import 'screens/notifications.dart';
 
 void main() {
   runApp(MyApp());
@@ -71,6 +72,11 @@ void main() {
     route: '/form_investments',
     builder: (context) => FormWidgetsInvestments(),
   ),
+  Demo(
+    name: 'Notificações',
+    route: '/notifications',
+    builder: (context) => NotificationsScreen(),
+  ),
 ];
 
 class MyApp extends StatelessWidget {
@@ -100,6 +106,10 @@ class HomePage extends StatelessWidget {
       drawer: NavDrawer(),
       appBar: AppBar(
         title: Text('App Finanças'),
+        actions: <Widget>[
+          IconButton(icon:Icon(Icons.notifications),
+                     onPressed: (){ Navigator.pushNamed(context, '/notifications'); })
+        ],
       ),
       body: ListView(
         children: [],
